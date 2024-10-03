@@ -1,0 +1,18 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+body {
+    background-color: pink;
+}
+
+#main_img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
