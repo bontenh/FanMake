@@ -1,6 +1,6 @@
 import React from 'react';
 
-let Mainimg = () => {
+export let Mainimg = () => {
     return (
         <div>
             <img id="main_img" src={"/storage/hmk_ann.png"} alt='初恋ひめか' />
@@ -8,4 +8,4 @@ let Mainimg = () => {
     );
 };
 
-export default Mainimg;
+// export default Mainimg;

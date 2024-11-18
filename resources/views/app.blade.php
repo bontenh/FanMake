@@ -13,6 +13,8 @@
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" herf="/css/app.css">
+    <link href="//vjs.zencdn.net/5.11/video-js.min.css" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/hls.js/latest/hls.min.js"></script>
 
     <!-- Scripts -->
     @viteReactRefresh

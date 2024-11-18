@@ -1,6 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
-let Header = () => {
+import GoogleAuth from './GoogleAuth';
+
+export let Header = () => {
+    useEffect(() => {});
     return (
         <div>
             <h1>FAN MAKE</h1>
@@ -12,8 +17,17 @@ let Header = () => {
                     <li>お知らせ</li> */}
                 </ul>
             </div>
+            <Link to="/streams/" className="item">
+                Streamy
+            </Link>
+            <div className="right menu">
+                <Link to="/streams/" className="item">
+                    All Streams
+                </Link>
+                {/* <GoogleAuth /> */}
+            </div>
         </div>
     );
 };
 
-export default Header;
+// export default Header;
