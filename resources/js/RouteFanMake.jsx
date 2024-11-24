@@ -1,23 +1,39 @@
 import React from 'react';
+import { StrictMode } from 'react';
 import {Home} from './pages/Home';
-import {Header} from './components/Header';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Chat } from './pages/Chat';
 import {StreamShow} from './components/StreamShow';
+import {createBrowserRouter,RouterProvider,} from "react-router-dom";
 
 export let RouteFanMake = () => {
+    let router = createBrowserRouter([
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/streams",
+          element: <StreamShow />,
+        },
+        {
+            path: "/chat",
+            element: <Chat />,
+          },
+    ]);
     return (
-        <BrowserRouter basename={import.meta.env.VITE_BASENAME}>
-            <Header />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/streams/" element={<StreamShow />} />
-                {/* <Route path="/streams/new" element={StreamCreate()} />
-                <Route path="/streams/edit/:id" element={StreamEdit()} />
-                <Route path="/streams/delete/:id" element={StreamDelete()} />
-                <Route path="/streams/:id" element={StreamShow()} /> */}
-            </Routes>
-        </BrowserRouter>
+        <StrictMode>
+            <RouterProvider 
+                future = 
+                    {{
+                        v7_fetcherPersist: true,
+                        v7_normalizeFormMethod: true,
+                        v7_partialHydration: true,
+                        v7_skipActionErrorRevalidation: true,
+                        v7_startTransition: true,
+                        v7_relativeSplatPath: true,
+                    }}
+                router={router}
+            />
+        </StrictMode>
     )
 }
-
-// export default RouteFanMake;

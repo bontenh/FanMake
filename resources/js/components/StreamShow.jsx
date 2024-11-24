@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRef, useEffect } from 'react';
 import Hls from 'hls.js';
+import { Header } from './Header';
 
 export let StreamShow = () => {
     let video_ref = useRef(null);
@@ -14,9 +15,9 @@ export let StreamShow = () => {
             let hls = new Hls(config);
             hls.loadSource(videoSrc);
             hls.attachMedia(video_ref.current);
-            hls.on(Hls.Events.MANIFEST_PARSED,function() {
-                video_ref.current.play();
-            });
+            // hls.on(Hls.Events.MANIFEST_PARSED,function() {
+            //     video_ref.current.play();
+            // });
         } else if ( video.canPlayType('application/vnd.apple.mpegurl') ) {  // ネイティブサポートブラウザ用
             video.src = videoSrc;
         }
@@ -25,6 +26,7 @@ export let StreamShow = () => {
 
     return (
         <div>
+            <Header />
             <video ref={video_ref} id="hls_video" width="640" height="480" controls></video>
         </div>
     )

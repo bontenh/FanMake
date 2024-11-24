@@ -18,3 +18,8 @@ composer -Vでバージョンを確認できます。<br>
 $ wget git.io/nodebrew<br>
 $ perl nodebrew setup<br>
 ln -s $HOME/laravel-project/example-laravel-github/public $HOME/public_html/xxx.conohawing.com/laravel<br>
+git clone https://github.com/bontenh/FanMake.git<br>
+composer install<br>
+cp .env.example .env<br>
+php artisan key:generate<br>
+npm install<br>

@@ -11,20 +11,10 @@ export let Header = () => {
             <h1>FAN MAKE</h1>
             <div>
                 <ul>
-                    <li><a href="/">HOME</a></li>
-                    <li><a href="/profile">プロフィール</a></li>
-                    {/* <li>スケジュール</li>
-                    <li>お知らせ</li> */}
+                    <li><Link to="/">HOME</Link></li>
+                    <li><Link to="/chat">チャット</Link></li>
+                    <li><Link to="/streams">配信</Link></li>
                 </ul>
-            </div>
-            <Link to="/streams/" className="item">
-                Streamy
-            </Link>
-            <div className="right menu">
-                <Link to="/streams/" className="item">
-                    All Streams
-                </Link>
-                {/* <GoogleAuth /> */}
             </div>
         </div>
     );
